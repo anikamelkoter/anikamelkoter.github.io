@@ -563,7 +563,7 @@
   </style>
 
   <section class="portfolio-window" aria-label="Anika Melkote portfolio landing-page preview">
-    <div class="landing">
+    <div class="landing" id="home">
       <div class="lanyard-zone" aria-label="Interactive badge concept">
         <div class="lanyard">
           <div class="strap"><span>ANIKA MELKOTE ANIKA MELKOTE ANIKA MELKOTE</span></div>
@@ -580,12 +580,12 @@
 
       <div class="main-copy">
         <nav class="portfolio-nav" aria-label="Portfolio sections">
-          <button type="button">Home</button>
-          <button type="button">Experience</button>
-          <button type="button">Projects</button>
-          <button type="button">Skills</button>
-          <button type="button">Education</button>
-          <button type="button">Personal</button>
+          <button type="button" data-scroll-target="home">Home</button>
+          <button type="button" data-scroll-target="experience">Experience</button>
+          <button type="button" data-scroll-target="projects">Projects</button>
+          <button type="button" data-scroll-target="skills">Skills</button>
+          <button type="button" data-scroll-target="education">Education</button>
+          <button type="button" data-scroll-target="personal">Personal</button>
           <a class="resume-download" href="Resume_AnikaMelkote.pdf" download="Resume_AnikaMelkote.pdf" aria-label="Download Anika Melkote's resume as a PDF">Download Resume</a>
         </nav>
         <p class="eyebrow">hi, i'm</p>
@@ -763,6 +763,19 @@
         index = (index + 1) % welcomes.length;
         word.textContent = welcomes[index];
       }, 3000);
+
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      root.querySelectorAll('[data-scroll-target]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const target = root.querySelector('#' + button.dataset.scrollTarget);
+          if (target) {
+            target.scrollIntoView({
+              behavior: reducedMotion.matches ? 'auto' : 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
     })();
   </script>
 </div>
