@@ -388,6 +388,30 @@
       font: 400 1rem/1.4 'Quicksand', sans-serif;
     }
 
+    #anika-portfolio-preview .projects-section {
+      padding: 0 clamp(20px, 4vw, 46px) 64px;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .projects-title {
+      margin: 0 0 16px;
+      font: 400 1.15rem/1 'Quicksand', sans-serif;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    #anika-portfolio-preview .projects-list {
+      display: grid;
+      gap: 30px;
+    }
+
+    #anika-portfolio-preview .project-placeholder {
+      width: 100%;
+      min-height: clamp(360px, 48vw, 590px);
+      border: 1px solid #777777;
+      background: #000000;
+    }
+
     @keyframes cursorBlink {
       0%, 45% { opacity: 1; }
       46%, 100% { opacity: 0; }
@@ -452,6 +476,12 @@
       #anika-portfolio-preview .experience-description {
         grid-column: 1 / -1;
         font-size: .95rem;
+      }
+      #anika-portfolio-preview .projects-section { padding: 0 18px 48px; }
+      #anika-portfolio-preview .projects-list { gap: 28px; }
+      #anika-portfolio-preview .project-placeholder {
+        min-height: 0;
+        aspect-ratio: 1.18 / 1;
       }
       @keyframes lanyardDrop {
         0% { transform: translateY(-560px) rotate(-8deg) scale(.76); }
@@ -615,6 +645,14 @@
             <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <h2 class="projects-title" id="projects-title">Projects</h2>
+      <div class="projects-list">
+        <article class="project-placeholder" aria-label="Project placeholder one"></article>
+        <article class="project-placeholder" aria-label="Project placeholder two"></article>
       </div>
     </section>
   </section>
