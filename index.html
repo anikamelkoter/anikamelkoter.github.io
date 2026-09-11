@@ -153,7 +153,8 @@
       margin-bottom: 62px;
     }
 
-    #anika-portfolio-preview .portfolio-nav button {
+    #anika-portfolio-preview .portfolio-nav button,
+    #anika-portfolio-preview .portfolio-nav .resume-download {
       min-height: 36px;
       padding: 8px 15px;
       border: 1px solid #ffffff;
@@ -167,7 +168,19 @@
       transition: background-color .2s ease, color .2s ease;
     }
 
-    #anika-portfolio-preview .portfolio-nav button:hover {
+    #anika-portfolio-preview .portfolio-nav .resume-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    #anika-portfolio-preview .portfolio-nav button:hover,
+    #anika-portfolio-preview .portfolio-nav button:focus-visible,
+    #anika-portfolio-preview .portfolio-nav button:active,
+    #anika-portfolio-preview .portfolio-nav .resume-download:hover,
+    #anika-portfolio-preview .portfolio-nav .resume-download:focus-visible,
+    #anika-portfolio-preview .portfolio-nav .resume-download:active {
       background: #ffffff;
       color: #000000;
     }
@@ -329,7 +342,8 @@
       #anika-portfolio-preview .lanyard { transform: scale(.76); transform-origin: top center; }
       #anika-portfolio-preview .main-copy { padding: 0; }
       #anika-portfolio-preview .portfolio-nav { margin-bottom: 40px; }
-      #anika-portfolio-preview .portfolio-nav button { flex: 1 1 29%; }
+      #anika-portfolio-preview .portfolio-nav button,
+      #anika-portfolio-preview .portfolio-nav .resume-download { flex: 1 1 29%; }
       #anika-portfolio-preview .statement { margin-top: 48px; }
       #anika-portfolio-preview .project-frame {
         grid-template-columns: 1fr;
@@ -384,6 +398,7 @@
           <button type="button">Skills</button>
           <button type="button">Education</button>
           <button type="button">Personal</button>
+          <a class="resume-download" href="Resume_AnikaMelkote.pdf" download="Resume_AnikaMelkote.pdf" aria-label="Download Anika Melkote's resume as a PDF">Download Resume</a>
         </nav>
         <p class="eyebrow">hi, i'm</p>
         <h1 class="main-name">ANIKA MELKOTE</h1>
@@ -433,3 +448,4 @@
 </div>
 </body>
 </html>
+
