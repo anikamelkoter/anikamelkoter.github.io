@@ -412,6 +412,53 @@
       background: #000000;
     }
 
+    #anika-portfolio-preview .skills-section,
+    #anika-portfolio-preview .education-section,
+    #anika-portfolio-preview .personal-section {
+      padding: 0 clamp(20px, 4vw, 46px) 34px;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .personal-section {
+      padding-bottom: 80px;
+    }
+
+    #anika-portfolio-preview .section-title {
+      margin: 0 0 16px;
+      font: 400 1.15rem/1 'Quicksand', sans-serif;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    #anika-portfolio-preview .skills-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    #anika-portfolio-preview .skill-row {
+      display: grid;
+      grid-template-columns: minmax(130px, 30%) minmax(0, 1fr);
+      gap: 8px;
+    }
+
+    #anika-portfolio-preview .skill-box {
+      min-height: 74px;
+      border: 1px solid #777777;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .education-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    #anika-portfolio-preview .education-box {
+      width: 100%;
+      min-height: clamp(248px, 34vw, 420px);
+      border: 1px solid #777777;
+      background: #000000;
+    }
+
     @keyframes cursorBlink {
       0%, 45% { opacity: 1; }
       46%, 100% { opacity: 0; }
@@ -482,6 +529,21 @@
       #anika-portfolio-preview .project-placeholder {
         min-height: 0;
         aspect-ratio: 1.18 / 1;
+      }
+      #anika-portfolio-preview .skills-section,
+      #anika-portfolio-preview .education-section,
+      #anika-portfolio-preview .personal-section {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+      #anika-portfolio-preview .skill-row {
+        grid-template-columns: minmax(110px, 31%) minmax(0, 1fr);
+        gap: 7px;
+      }
+      #anika-portfolio-preview .skill-box { min-height: 74px; }
+      #anika-portfolio-preview .education-box {
+        min-height: 0;
+        aspect-ratio: 2.04 / 1;
       }
       @keyframes lanyardDrop {
         0% { transform: translateY(-560px) rotate(-8deg) scale(.76); }
@@ -654,6 +716,40 @@
         <article class="project-placeholder" aria-label="Project placeholder one"></article>
         <article class="project-placeholder" aria-label="Project placeholder two"></article>
       </div>
+    </section>
+
+    <section class="skills-section" id="skills" aria-labelledby="skills-title">
+      <h2 class="section-title" id="skills-title">Skills</h2>
+      <div class="skills-list">
+        <div class="skill-row">
+          <div class="skill-box" aria-label="Skill category placeholder one"></div>
+          <div class="skill-box" aria-label="Skill details placeholder one"></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-box" aria-label="Skill category placeholder two"></div>
+          <div class="skill-box" aria-label="Skill details placeholder two"></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-box" aria-label="Skill category placeholder three"></div>
+          <div class="skill-box" aria-label="Skill details placeholder three"></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-box" aria-label="Skill category placeholder four"></div>
+          <div class="skill-box" aria-label="Skill details placeholder four"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="education-section" id="education" aria-labelledby="education-title">
+      <h2 class="section-title" id="education-title">Education</h2>
+      <div class="education-list">
+        <article class="education-box" aria-label="Education placeholder one"></article>
+        <article class="education-box" aria-label="Education placeholder two"></article>
+      </div>
+    </section>
+
+    <section class="personal-section" id="personal" aria-labelledby="personal-title">
+      <h2 class="section-title" id="personal-title">Personal</h2>
     </section>
   </section>
 
