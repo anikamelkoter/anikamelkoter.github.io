@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anika Melkote Portfolio</title>
+  <style>html, body { margin: 0; background: #000; }</style>
+</head>
+<body>
+<div id="anika-portfolio-preview">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Allura&family=Lato:wght@300;400&family=Quicksand:wght@400;500&family=Roboto+Mono:wght@300;400&display=swap');
+
+    #anika-portfolio-preview {
+      width: 100%;
+      color: #ffffff;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    #anika-portfolio-preview * { box-sizing: border-box; }
+
+    #anika-portfolio-preview .portfolio-window {
+      position: relative;
+      width: 100%;
+      min-height: 620px;
+      overflow: hidden;
+      background: #000000;
+      color: #ffffff;
+    }
+
+    #anika-portfolio-preview .landing {
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: minmax(230px, 32%) 1fr;
+      gap: clamp(28px, 5vw, 74px);
+      align-items: center;
+      padding: 0 clamp(26px, 5vw, 70px);
+      opacity: 1;
+    }
+
+    #anika-portfolio-preview .lanyard-zone {
+      position: relative;
+      height: 620px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    #anika-portfolio-preview .lanyard {
+      position: relative;
+      width: 210px;
+      height: 555px;
+      transform-origin: 50% 0;
+      animation: lanyardDrop 1.3s cubic-bezier(.18,.75,.27,1.05) .2s both,
+                 lanyardSway 5.5s ease-in-out 1.5s infinite;
+    }
+
+    #anika-portfolio-preview .strap {
+      position: absolute;
+      top: -105px;
+      left: 88px;
+      width: 34px;
+      height: 365px;
+      border-left: 11px solid #101010;
+      border-right: 11px solid #191919;
+      transform: rotate(-1.7deg);
+      box-shadow: 0 0 0 1px #2b2b2b;
+    }
+
+    #anika-portfolio-preview .strap span {
+      position: absolute;
+      top: 150px;
+      left: -34px;
+      width: 78px;
+      color: #d9d9d9;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 9px;
+      letter-spacing: .08em;
+      transform: rotate(90deg);
+      white-space: nowrap;
+    }
+
+    #anika-portfolio-preview .clip {
+      position: absolute;
+      top: 243px;
+      left: 90px;
+      width: 30px;
+      height: 42px;
+      border: 2px solid #444444;
+      border-radius: 7px;
+      background: #080808;
+    }
+
+    #anika-portfolio-preview .badge {
+      position: absolute;
+      top: 277px;
+      left: 12px;
+      width: 186px;
+      height: 252px;
+      padding: 82px 17px 18px;
+      border: 1px solid #292929;
+      border-radius: 12px;
+      background: linear-gradient(145deg, #171717 0%, #070707 58%, #111111 100%);
+      box-shadow: 0 24px 45px rgba(0,0,0,.58), inset 0 0 35px rgba(255,255,255,.025);
+    }
+
+    #anika-portfolio-preview .portrait-frame {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      width: 102px;
+      height: 102px;
+      transform: translateX(-50%);
+      overflow: hidden;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background: #ded7d1;
+    }
+
+    #anika-portfolio-preview .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 32%;
+    }
+
+    #anika-portfolio-preview .badge-name {
+      margin-top: 28px;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.32rem;
+      line-height: 1.02;
+      letter-spacing: -.02em;
+    }
+
+    #anika-portfolio-preview .badge-line {
+      margin-top: 10px;
+      max-width: 150px;
+      font-family: 'Lato', sans-serif;
+      font-size: .58rem;
+      line-height: 1.35;
+      letter-spacing: .01em;
+      color: #f1f1f1;
+    }
+
+    #anika-portfolio-preview .main-copy {
+      padding: 54px 0 48px;
+    }
+
+    #anika-portfolio-preview .portfolio-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 62px;
+    }
+
+    #anika-portfolio-preview .portfolio-nav button {
+      min-height: 36px;
+      padding: 8px 15px;
+      border: 1px solid #ffffff;
+      border-radius: 0;
+      background: #000000;
+      color: #ffffff;
+      font: 500 .76rem/1 'Quicksand', sans-serif;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color .2s ease, color .2s ease;
+    }
+
+    #anika-portfolio-preview .portfolio-nav button:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    #anika-portfolio-preview .eyebrow,
+    #anika-portfolio-preview .welcome-line {
+      margin: 0;
+      font-size: .96rem;
+      font-weight: 400;
+    }
+
+    #anika-portfolio-preview .main-name {
+      margin: 3px 0 0;
+      font-family: 'Lato', sans-serif;
+      font-size: clamp(2.3rem, 5.1vw, 4.4rem);
+      font-weight: 300;
+      line-height: .98;
+      letter-spacing: -.035em;
+    }
+
+    #anika-portfolio-preview .intro-copy {
+      max-width: 660px;
+      margin: 34px 0 0;
+      font-size: clamp(1.08rem, 2.15vw, 1.55rem);
+      line-height: 1.45;
+    }
+
+    #anika-portfolio-preview .statement {
+      margin: 72px 0 0;
+      font-family: 'Roboto Mono', monospace;
+      font-size: clamp(1.4rem, 3.05vw, 2.45rem);
+      font-weight: 300;
+      line-height: 1.18;
+      letter-spacing: -.04em;
+    }
+
+    #anika-portfolio-preview .project-divider {
+      height: 1px;
+      margin: 0 clamp(26px, 4vw, 46px);
+      background: #282828;
+    }
+
+    #anika-portfolio-preview .current-project {
+      padding: 38px clamp(26px, 4vw, 46px) 54px;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .project-frame {
+      display: grid;
+      grid-template-columns: minmax(245px, 1fr) minmax(0, 1.55fr) minmax(150px, .58fr);
+      gap: clamp(18px, 2.5vw, 34px);
+      align-items: center;
+      min-height: 250px;
+      padding: 20px 22px;
+      border: 1px solid #ffffff;
+      background: #000000;
+      overflow: hidden;
+    }
+
+    #anika-portfolio-preview .project-frame > * { min-width: 0; }
+
+    #anika-portfolio-preview .project-label,
+    #anika-portfolio-preview .stack-label {
+      margin: 0 0 18px;
+      font: 400 clamp(.88rem, 1.7vw, 1.25rem)/1 'Quicksand', sans-serif;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    #anika-portfolio-preview .project-identity {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    #anika-portfolio-preview .project-icon {
+      flex: 0 0 132px;
+      width: 132px;
+      height: 132px;
+      border-radius: 26px;
+      object-fit: cover;
+    }
+
+    #anika-portfolio-preview .project-name {
+      margin: 0;
+      font: 300 clamp(2.1rem, 4.4vw, 3.7rem)/1 'Lato', sans-serif;
+      letter-spacing: -.035em;
+      white-space: nowrap;
+    }
+
+    #anika-portfolio-preview .cursor-mark {
+      display: inline-block;
+      width: .72em;
+      border-bottom: .09em solid #ffffff;
+      transform: translateY(-.08em);
+      animation: cursorBlink .9s steps(1, end) infinite;
+    }
+
+    #anika-portfolio-preview .project-description {
+      margin: 0;
+      font: 400 clamp(1rem, 1.9vw, 1.25rem)/1.48 'Quicksand', sans-serif;
+    }
+
+    #anika-portfolio-preview .stack-label { text-align: left; }
+
+    #anika-portfolio-preview .stack-list {
+      display: grid;
+      gap: 12px;
+      width: 100%;
+    }
+
+    #anika-portfolio-preview .stack-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 42px;
+      padding: 5px 14px 5px 8px;
+      border-radius: 999px;
+      background: #e8e8e8;
+      color: #111111;
+      font: 400 1rem/1 'Quicksand', sans-serif;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    #anika-portfolio-preview .stack-item img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    @keyframes cursorBlink {
+      0%, 45% { opacity: 1; }
+      46%, 100% { opacity: 0; }
+    }
+
+    @keyframes lanyardDrop {
+      0% { transform: translateY(-560px) rotate(-8deg); }
+      72% { transform: translateY(18px) rotate(4deg); }
+      100% { transform: translateY(0) rotate(0); }
+    }
+
+    @keyframes lanyardSway {
+      0%, 100% { transform: rotate(-1.2deg); }
+      50% { transform: rotate(1.2deg); }
+    }
+
+    @media (max-width: 760px) {
+      #anika-portfolio-preview .portfolio-window,
+      #anika-portfolio-preview .landing { min-height: 850px; }
+      #anika-portfolio-preview .landing {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0 24px 48px;
+      }
+      #anika-portfolio-preview .lanyard-zone { height: 430px; }
+      #anika-portfolio-preview .lanyard { transform: scale(.76); transform-origin: top center; }
+      #anika-portfolio-preview .main-copy { padding: 0; }
+      #anika-portfolio-preview .portfolio-nav { margin-bottom: 40px; }
+      #anika-portfolio-preview .portfolio-nav button { flex: 1 1 29%; }
+      #anika-portfolio-preview .statement { margin-top: 48px; }
+      #anika-portfolio-preview .project-frame {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 24px;
+      }
+      #anika-portfolio-preview .project-icon {
+        flex-basis: 104px;
+        width: 104px;
+        height: 104px;
+        border-radius: 22px;
+      }
+      #anika-portfolio-preview .stack-list { max-width: 220px; }
+      @keyframes lanyardDrop {
+        0% { transform: translateY(-560px) rotate(-8deg) scale(.76); }
+        72% { transform: translateY(18px) rotate(4deg) scale(.76); }
+        100% { transform: translateY(0) rotate(0) scale(.76); }
+      }
+      @keyframes lanyardSway {
+        0%, 100% { transform: rotate(-1.2deg) scale(.76); }
+        50% { transform: rotate(1.2deg) scale(.76); }
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #anika-portfolio-preview .landing { opacity: 1; animation: none; }
+      #anika-portfolio-preview .lanyard { animation: none; }
+    }
+  </style>
+
+  <section class="portfolio-window" aria-label="Anika Melkote portfolio landing-page preview">
+    <div class="landing">
+      <div class="lanyard-zone" aria-label="Interactive badge concept">
+        <div class="lanyard">
+          <div class="strap"><span>ANIKA MELKOTE</span></div>
+          <div class="clip"></div>
+          <div class="badge">
+            <div class="portrait-frame">
+              <img src="data:image/jpeg;base64,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" alt="Anika Melkote headshot" />
+            </div>
+            <div class="badge-name">Anika<br />Melkote</div>
+            <div class="badge-line">Connectivity-centered design</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-copy">
+        <nav class="portfolio-nav" aria-label="Portfolio sections">
+          <button type="button">Home</button>
+          <button type="button">Experience</button>
+          <button type="button">Projects</button>
+          <button type="button">Skills</button>
+          <button type="button">Education</button>
+          <button type="button">Personal</button>
+        </nav>
+        <p class="eyebrow">hi, i'm</p>
+        <h1 class="main-name">ANIKA MELKOTE</h1>
+        <p class="welcome-line">&amp; <span id="rotating-welcome">welcome</span> to my page</p>
+        <p class="intro-copy">yada yada yada yada yada yada yada yada<br />yada yada yada yada yada yada yada yada</p>
+        <p class="statement">finding creativity through connectivity.</p>
+      </div>
+    </div>
+
+    <div class="project-divider" aria-hidden="true"></div>
+    <section class="current-project" aria-label="Currently working on">
+      <div class="project-frame">
+        <div>
+          <p class="project-label">Currently working on:</p>
+          <div class="project-identity">
+            <img class="project-icon" src="data:image/webp;base64,UklGRsYDAABXRUJQVlA4ILoDAACQFgCdASpgAGAAPpE+mkqloyIhpzQLaLASCWkAFeq9jv9zrzP9J4OXg7tP7wrBnjN7zcxJne+pvYN6PpZEUzk5L5PMngX31LfcCYEO4BqyzAxD1zzI+ovFwt40epv7Bc2Hlpmkp7KRxm4S6upoAZZo87ZDBikKuYXgvIlOVVSDkO8FOIwpLcMf95IIwq4XvX2zywNAORBV9XRVbBX4sOLjg2orleGJAauwDHUjsZvTMf62Kn+0rhcvPPOAXQAA/vp9iYUa5bTS1dDh+ZqVKzrT652b1RNY07atPCa03d12rw0Lde3UTksoqq1ppGcG23RHoANCszdlzT377dq9+mh8ll69TRx1ADK4go9StyxKNxwOZH5K/FUg/n3S8w3WC4PgWEJhKooTUPYo4iADIqyaf+9NRYET6HqUWYc63/gvZqxyAghnPbhehBjCvxY8gmejAUZRVMj96ZhjNmJcXAmgnKAxx10Vtq2c2PudOJ0XOS03MbgFz3J7OTQYfxBTvYDGlf1RtrF0F4p/a3fPQI4qO5SDe5Z+w5oPS1iSefSZKvEw+30hrKtSmpVuiPwch8+WIcMSFsF7tlvwU1eshOz3++yUI63G+8/7TKNDRIhDQPtahUTLo3Naf4zRdUnM5f+53zchpIJMD2lpH9J+aXcN/f7ZJn9cl/p+8geofoAlpDlb5OJ0BMMjjgO+tplzG4QMf30XwjPDcYy4b3UBOyQiUNAfj8aTU3Mc8eadQ+p+xVBglXJDe242gDJzdOpQf/PJ7xD+uQNedlJtVWOeOdz7fG4rTwrYQxQiFmxOwZRxFCOhcsf7jge5J3rn8hdbDAo+yevWW2tY5g/MBllk417EGyaOiZy+5SHXZP8xThlM+T2PEMzbb8rAqBCbTqd9w/BzbZM+2oV1ganDjqdefYoJV292NqaqGlZK5YWn3dOgu5it5qFQe9R/4b2t8FLS0rR5jiupgLsZ3XioFvydRyhNkmZ5MRqh2BdTcvn/pPsXdh2GoleclGRNyhT5LTVsSyes8UgoKiQnD45bN473zevnf6i2HFCxoi3hUUw8uu+v6+uGhmqe+17gOhwCd+ZsRqqLYcnL35WmU6CRR/k9D5l9KSXkZAUFy2g/1uWF+SZfJ/AYux4QCGHbfsl9MRnzoQz0BYJfxZZCmYKvU4a/ZFIZLJNLOh8+rYCf/m6CxJOSc6NkQou2oa+oKPhkAMPgAErunQjPYQ3ot15c/5KW129oTVoHzchE7WWSy/Z6DzkDOcStIzy3rBgAAAA=" alt="Computer monitor project icon" />
+            <p class="project-name">TALES<span class="cursor-mark" aria-hidden="true"></span></p>
+          </div>
+        </div>
+
+        <p class="project-description">yada yada yada yada yada yada yada<br />yada yada yada yada yada yada yada<br />yada yada yada yada yada yada yada<br />yada yada yada yada yada yada yada<br />yada yada yada yada yada yada yada</p>
+
+        <div>
+          <p class="stack-label">Tech stack</p>
+          <div class="stack-list">
+            <div class="stack-item"><img src="data:image/webp;base64,UklGRlACAABXRUJQVlA4IEQCAABQDACdASpAADoAPoU0lUelIyIhPfIoAKAQiWkAE9qfdq6Csbll6TWaV45Xthu5ZkOBUQzPIMWg6fIMNReM/Q4I8K5pulRU4zBR+eO4XsFtUWUotyFSHdPtcbDLV1rU7ipuwTS/xxgpsjBKoAD2v/v+xRexWciXRj5k4k18zYxDNF301C/67Vd6EYN3QdZspO45+RT88LODKmqJfCC8OtNt+bnqnx29JyUEwukNwVHfCQAa2qLJMxUhd19qCVIHga+dSefohV3kwFoep+FSzHL/zvvjNHFHuYG5mm6KX2RV5fqEtay0pST82srZtKo0IgwRQjPfvQAvZsIc8B8qiXLXDyHJWgAKi7EXXffWefI/KHkosT00Zso12K9RCznt5fXLbApUlvbxr0E8RHS3sz/IXxaUj7xQFsZUoSqtmb/HCTkMzJTZz35+XKcDaMT1M5X6n+/msRRjdNvuyrTrETBWYvljlozuRDaMhv9okLfZxSml8f846XNKlyxYtVY8KYgYfSFvtNSvhoWciFxcOuVzvIZ23epMIE3amJPovrQ5Fgeuws092z6+TwFWKOzZyJb+oCzofsBKT+I6rMXIXPQVWUWU97tEBFJ5bPXuydirmxLwPI/h7PL9+14OgXtJ+CiW6OqBFpuuzsrgNwzEtll+SOJQeTfWGdrXE5tXKRTXSEhXfb9+Wqz15T/fpFeMgg4PN6YvHgi0L/XDExTm7S7KPY0IPAEUcKUBD3NMIJlxBqdmNnC5Bk4B0xss5cshLJ+mAAAA" alt="" />NEXT.JS</div>
+            <div class="stack-item"><img src="data:image/webp;base64,UklGRloCAABXRUJQVlA4IE4CAACQDQCdASpAADkAPpFGm0slo6IhpBgKSLASCWkAE95fXa9LfB14N6cGCmf+Mr6h4DKd81rC6zrRiLxZbOaAcC5iH/uWvHSP9NFeq7aMo2KZ0bFzjc/b2tkFA12b4pb3/IKHacXhIdPKMzuslSwFt/BgsmN0KAAA/vwQtvVf/FKkweQrjAef9yuXJsNvAnSxbPt412IK0ZsfclQWnDKElvdWCxSx/mZlTvjr0+Pi1yVhER9+DWFEKYMgTs0y2GvHZj/QAEKb63+FAm8PSggORVCeEzGLGFZpcqfYdMCDLPtF9GGzqdF2PKq/84IMPdsobXgjp958TpPA1TtlxgeuRZrpPYAEdZ2/VPkPpVNiRYen0TlGIihj1xP3F0BoO7UzD4VUoOixjBFwRbsA+3XK39z+Oo4Pk2qe79qAn0Uv+wxnRsaNNagEfq+CruiSxifQbDvo0k4l6xf3XWFFgIW36g1J05M8QUoKigMcWxK0yP0QlQZbmhQX3f5+TlfvcqJR+oeir9JbbaX839mAdSKO07uVKqNRpZSwL9jkbcPIvr6r41Rw6NDnswXpabA4WFYewEovHOk09LSrXejar2NBT6hMFt/r7FlF5OxwKZz7TROR9o8BgYpzUVcfFS77xl2LNrJ6ypZ+TSmDUVdZx78t8MbzEgVJgvkEdiAX490pfv+QHys5D5TGow5/oJiPrDkxlCXsa00xQ4bI71xWLNBlSsmjXbfcStud4qkYNzgyymRRnuM0ALxJbwHwN4+r9KHc/YZvR14CqfhKulILICSAAA=" alt="" />FastAPI</div>
+            <div class="stack-item"><img src="data:image/webp;base64,UklGRsoBAABXRUJQVlA4IL4BAABQCgCdASpAADAAPo04mEelI6KhKrgO+KARiWkAFeAddP9groKyHQ49VSUGL0Z7qMv1E5q2nJUKXGCntuyQCF2OWuE+2U65PRgROBHa2skRqqQZqgzUeAohmkmAAP74L48M4Fieubb7AS2Ew1BF/Wv3k4Q5RTeBO2i21dnlnPhY3//RwXRDds/R9HSlF5BNgzH+c32RwxxUuA7MXSj4FcQQ6bsbMWb4iVfIzvZ2zF7dMt8fmrrIDZo/zVmzJh23WTxNNmMtLltrBdVfVtD9KWDTehcer4CukhvqIbzeFrjqmR5z9Wx9wA9l0FmPMsDXREoCINuVv5s/c39y3u/SuRpRMMIm/v3rU4uDEL01UjlHhyq+Dub8+sv/VM6UCx71bOce5CkL8kKlE+xhCmzuK60PJcVYfO6xR3C4ksmJRR/O1q7hXx/R3V7BNP3t8HSJqLAiVy6NOHy1FmvBfEOIBPPL4DVpjnqEAVZxtc2IP6WCo8LTV61og8Xm9MhzWUoEuZdyWfxLZ9rugNgwsdW33tAN/eCEOGhPsNbFekQRP+l6uW/PE2a1MdeG8gHPvsMe2x803G6Pw+PCHRls8sAAAA=" alt="" />Docker</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <script>
+    (() => {
+      const root = document.getElementById('anika-portfolio-preview');
+      const word = root.querySelector('#rotating-welcome');
+      const welcomes = ['welcome', 'bienvenue', 'bienvenida', 'swāgatam', 'benvenuta', 'yōkoso'];
+      let index = 0;
+      window.setInterval(() => {
+        index = (index + 1) % welcomes.length;
+        word.textContent = welcomes[index];
+      }, 3000);
+    })();
+  </script>
+</div>
+</body>
+</html>
