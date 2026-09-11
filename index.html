@@ -314,6 +314,80 @@
       object-fit: cover;
     }
 
+    #anika-portfolio-preview .experience-section {
+      padding: 0 clamp(26px, 4vw, 46px) 64px;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .experience-title {
+      margin: 0 0 16px;
+      font: 400 1.15rem/1 'Quicksand', sans-serif;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }
+
+    #anika-portfolio-preview .experience-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    #anika-portfolio-preview .experience-card {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 24px;
+      align-items: center;
+      min-height: 188px;
+      padding: 20px 24px;
+      border: 1px solid #777777;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .experience-logo {
+      width: 100px;
+      height: 100px;
+      justify-self: center;
+      border: 1px solid #777777;
+      border-radius: 14px;
+      background: #050505;
+    }
+
+    #anika-portfolio-preview .experience-content {
+      min-width: 0;
+    }
+
+    #anika-portfolio-preview .experience-heading,
+    #anika-portfolio-preview .experience-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: baseline;
+    }
+
+    #anika-portfolio-preview .experience-company {
+      margin: 0;
+      font: 400 1.08rem/1.25 'Quicksand', sans-serif;
+      letter-spacing: .01em;
+      text-transform: uppercase;
+    }
+
+    #anika-portfolio-preview .experience-location,
+    #anika-portfolio-preview .experience-role,
+    #anika-portfolio-preview .experience-dates {
+      margin: 0;
+      font: 400 .8rem/1.35 'Quicksand', sans-serif;
+      text-transform: uppercase;
+    }
+
+    #anika-portfolio-preview .experience-location,
+    #anika-portfolio-preview .experience-dates {
+      flex: 0 0 auto;
+    }
+
+    #anika-portfolio-preview .experience-description {
+      margin: 14px 0 0;
+      font: 400 1rem/1.4 'Quicksand', sans-serif;
+    }
+
     @keyframes cursorBlink {
       0%, 45% { opacity: 1; }
       46%, 100% { opacity: 0; }
@@ -357,6 +431,28 @@
         border-radius: 22px;
       }
       #anika-portfolio-preview .stack-list { max-width: 220px; }
+      #anika-portfolio-preview .experience-section { padding: 0 24px 48px; }
+      #anika-portfolio-preview .experience-card {
+        grid-template-columns: 82px minmax(0, 1fr);
+        gap: 16px;
+        min-height: 0;
+        padding: 18px;
+      }
+      #anika-portfolio-preview .experience-logo {
+        width: 72px;
+        height: 72px;
+        border-radius: 12px;
+      }
+      #anika-portfolio-preview .experience-heading,
+      #anika-portfolio-preview .experience-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+      }
+      #anika-portfolio-preview .experience-description {
+        grid-column: 1 / -1;
+        font-size: .95rem;
+      }
       @keyframes lanyardDrop {
         0% { transform: translateY(-560px) rotate(-8deg) scale(.76); }
         72% { transform: translateY(18px) rotate(4deg) scale(.76); }
@@ -429,6 +525,96 @@
             <div class="stack-item"><img src="data:image/webp;base64,UklGRsoBAABXRUJQVlA4IL4BAABQCgCdASpAADAAPo04mEelI6KhKrgO+KARiWkAFeAddP9groKyHQ49VSUGL0Z7qMv1E5q2nJUKXGCntuyQCF2OWuE+2U65PRgROBHa2skRqqQZqgzUeAohmkmAAP74L48M4Fieubb7AS2Ew1BF/Wv3k4Q5RTeBO2i21dnlnPhY3//RwXRDds/R9HSlF5BNgzH+c32RwxxUuA7MXSj4FcQQ6bsbMWb4iVfIzvZ2zF7dMt8fmrrIDZo/zVmzJh23WTxNNmMtLltrBdVfVtD9KWDTehcer4CukhvqIbzeFrjqmR5z9Wx9wA9l0FmPMsDXREoCINuVv5s/c39y3u/SuRpRMMIm/v3rU4uDEL01UjlHhyq+Dub8+sv/VM6UCx71bOce5CkL8kKlE+xhCmzuK60PJcVYfO6xR3C4ksmJRR/O1q7hXx/R3V7BNP3t8HSJqLAiVy6NOHy1FmvBfEOIBPPL4DVpjnqEAVZxtc2IP6WCo8LTV61og8Xm9MhzWUoEuZdyWfxLZ9rugNgwsdW33tAN/eCEOGhPsNbFekQRP+l6uW/PE2a1MdeG8gHPvsMe2x803G6Pw+PCHRls8sAAAA=" alt="" />Docker</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience" aria-labelledby="experience-title">
+      <h2 class="experience-title" id="experience-title">Experience</h2>
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="experience-logo" role="img" aria-label="Somerset Hills School District logo placeholder"></div>
+          <div class="experience-content">
+            <div class="experience-heading">
+              <h3 class="experience-company">Somerset Hills School District</h3>
+              <p class="experience-location">NJ</p>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-role">Systems Technician</p>
+              <p class="experience-dates">June 2026 - Present</p>
+            </div>
+            <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-logo" role="img" aria-label="Royal Bank of Canada - CM logo placeholder"></div>
+          <div class="experience-content">
+            <div class="experience-heading">
+              <h3 class="experience-company">Royal Bank of Canada - CM</h3>
+              <p class="experience-location">NJ</p>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-role">Deskside Support Services Technology Intern</p>
+              <p class="experience-dates">May 2025 - Aug 2025</p>
+            </div>
+            <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-logo" role="img" aria-label="Little Red Riding Hood, Incorporated logo placeholder"></div>
+          <div class="experience-content">
+            <div class="experience-heading">
+              <h3 class="experience-company">Little Red Riding Hood, Incorporated</h3>
+              <p class="experience-location">GA</p>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-role">Frontend App Development Engineer</p>
+              <p class="experience-dates">Sept 2025 - Dec 2025</p>
+            </div>
+            <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-logo" role="img" aria-label="Uber Technologies, Incorporated logo placeholder"></div>
+          <div class="experience-content">
+            <div class="experience-heading">
+              <h3 class="experience-company">Uber Technologies, Incorporated</h3>
+              <p class="experience-location">PA</p>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-role">Business Development Campaign Intern</p>
+              <p class="experience-dates">June 2024 - Oct 2024</p>
+            </div>
+            <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-logo" role="img" aria-label="DoorDash logo placeholder"></div>
+          <div class="experience-content">
+            <div class="experience-heading">
+              <h3 class="experience-company">DoorDash</h3>
+              <p class="experience-location">NY</p>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-role">Strategy and Operations Intern</p>
+              <p class="experience-dates">Jan 2024 - June 2024</p>
+            </div>
+            <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
+          </div>
+        </article>
+        <article class="experience-card">
+          <div class="experience-logo" role="img" aria-label="AI Camp Incorporated logo placeholder"></div>
+          <div class="experience-content">
+            <div class="experience-heading">
+              <h3 class="experience-company">AI Camp Incorporated</h3>
+              <p class="experience-location">CA</p>
+            </div>
+            <div class="experience-meta">
+              <p class="experience-role">Hiring Data Analysis Intern</p>
+              <p class="experience-dates">Jan 2023 - Aug 2024</p>
+            </div>
+            <p class="experience-description">yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada yada.</p>
+          </div>
+        </article>
       </div>
     </section>
   </section>
