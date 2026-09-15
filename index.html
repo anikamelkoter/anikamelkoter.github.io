@@ -633,6 +633,28 @@
       font: 400 .9rem/1.55 'Quicksand', sans-serif;
     }
 
+    #anika-portfolio-preview .education-activity-list {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    #anika-portfolio-preview .education-activity-list li {
+      position: relative;
+      padding-left: 14px;
+      font: 400 .86rem/1.45 'Quicksand', sans-serif;
+      color: #d7d7d7;
+    }
+
+    #anika-portfolio-preview .education-activity-list li::before {
+      content: "◦";
+      position: absolute;
+      left: 0;
+      color: #777777;
+    }
+
     #anika-portfolio-preview .coursework-list {
       display: flex;
       flex-wrap: wrap;
@@ -1039,12 +1061,32 @@
 
             <div class="education-meta-grid">
               <div>
-                <p class="education-meta-label">Highlights</p>
-                <p class="education-meta-copy">GPA 3.7 · Dean’s List, all semesters · 1st Place, Merck Case Competition</p>
+                <p class="education-meta-label">Campus Leadership &amp; Involvement</p>
+                <ul class="education-activity-list">
+                  <li>Residence Housing Association — Residential Assistant</li>
+                  <li>Corporate Finance Society — Marketing &amp; Analytics Liaison</li>
+                  <li>Milana Kannada Students Association — Treasurer &amp; Secretary</li>
+                  <li>Society of Asian Scientists and Engineers (SASE) — Marketing Chair</li>
+                  <li>Rutgers Men's Ice Hockey AAU D2 — Media Coordinator</li>
+                  <li>Kappa Phi Gamma Sorority Inc. — Secretary, Fundraising Chair, Social Chair &amp; MGC Representative</li>
+                  <li>Kappa Theta Pi Fraternity Inc. — Marketing Chair &amp; Founding Board</li>
+                </ul>
               </div>
               <div>
-                <p class="education-meta-label">Selected coursework</p>
-                <div class="coursework-list">
+                <p class="education-meta-label">Competitions &amp; Design Challenges</p>
+                <ul class="education-activity-list">
+                  <li>BITS Merck Design Case Study Case Competition — 1st Place</li>
+                  <li>CreativeX FIGMA UI/UX Case Competition</li>
+                  <li>Johnson &amp; Johnson Finance Case Competition 2024</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="education-rule" aria-hidden="true"></div>
+
+            <div>
+              <p class="education-meta-label">Selected coursework</p>
+              <div class="coursework-list">
                   <span class="coursework-item">INTRO COMPUTER SCI</span>
                   <span class="coursework-item">INTRO COMMUNICATION &amp; INFORMATICS</span>
                   <span class="coursework-item">WRITING FOR BUSINESS &amp; PROFESSIONS</span>
@@ -1069,7 +1111,6 @@
                   <span class="coursework-item">IMAGING &amp; MULTIMEDIA</span>
                   <span class="coursework-item">PRINCIPLES OF PROGRAMMING LANGUAGES</span>
                   <span class="coursework-item">NUMERICAL ANALYSIS &amp; COMPUTING</span>
-                </div>
               </div>
             </div>
           </div>
