@@ -537,14 +537,127 @@
 
     #anika-portfolio-preview .education-list {
       display: grid;
-      gap: 20px;
+      gap: 14px;
     }
 
     #anika-portfolio-preview .education-box {
+      position: relative;
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: clamp(20px, 3vw, 42px);
       width: 100%;
-      min-height: clamp(248px, 34vw, 420px);
+      padding: clamp(24px, 3.5vw, 42px);
       border: 1px solid #777777;
       background: #000000;
+      overflow: hidden;
+    }
+
+    #anika-portfolio-preview .education-box::after {
+      content: "";
+      position: absolute;
+      right: -42px;
+      top: -42px;
+      width: 120px;
+      height: 120px;
+      border: 1px solid #333333;
+      border-radius: 50%;
+    }
+
+    #anika-portfolio-preview .education-year {
+      margin: 2px 0 0;
+      font: 300 clamp(1.45rem, 2.6vw, 2.15rem)/1 'Roboto Mono', monospace;
+      letter-spacing: -.04em;
+      color: #f3f3f3;
+    }
+
+    #anika-portfolio-preview .education-content {
+      min-width: 0;
+    }
+
+    #anika-portfolio-preview .education-school-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 8px;
+    }
+
+    #anika-portfolio-preview .education-school {
+      margin: 0;
+      font: 400 clamp(1.45rem, 2.7vw, 2.25rem)/1.05 'Lato', sans-serif;
+      letter-spacing: -.035em;
+    }
+
+    #anika-portfolio-preview .education-location {
+      margin: 5px 0 0;
+      font: 400 .78rem/1.2 'Roboto Mono', monospace;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: #9f9f9f;
+      white-space: nowrap;
+    }
+
+    #anika-portfolio-preview .education-degree {
+      margin: 0;
+      font: 400 clamp(1rem, 1.6vw, 1.22rem)/1.45 'Quicksand', sans-serif;
+    }
+
+    #anika-portfolio-preview .education-subtitle {
+      margin: 6px 0 0;
+      font: 400 .9rem/1.45 'Quicksand', sans-serif;
+      color: #ababab;
+    }
+
+    #anika-portfolio-preview .education-rule {
+      height: 1px;
+      margin: 24px 0 18px;
+      background: #252525;
+    }
+
+    #anika-portfolio-preview .education-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    #anika-portfolio-preview .education-meta-label {
+      margin: 0 0 9px;
+      font: 400 .7rem/1 'Roboto Mono', monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #777777;
+    }
+
+    #anika-portfolio-preview .education-meta-copy {
+      margin: 0;
+      font: 400 .9rem/1.55 'Quicksand', sans-serif;
+    }
+
+    #anika-portfolio-preview .coursework-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    #anika-portfolio-preview .coursework-item {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 6px 10px;
+      border: 1px solid #3f3f3f;
+      border-radius: 999px;
+      font: 400 .76rem/1 'Quicksand', sans-serif;
+      color: #d7d7d7;
+    }
+
+    #anika-portfolio-preview .education-box.education-secondary {
+      grid-template-columns: 150px minmax(0, 1fr);
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    #anika-portfolio-preview .education-secondary .education-school {
+      font-size: clamp(1.25rem, 2.2vw, 1.8rem);
     }
 
     @keyframes cursorBlink {
@@ -629,6 +742,24 @@
         gap: 7px;
       }
       #anika-portfolio-preview .skill-box { min-height: 74px; }
+
+      #anika-portfolio-preview .education-box,
+      #anika-portfolio-preview .education-box.education-secondary {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      #anika-portfolio-preview .education-school-row {
+        display: block;
+      }
+
+      #anika-portfolio-preview .education-location {
+        margin-top: 12px;
+      }
+
+      #anika-portfolio-preview .education-meta-grid {
+        grid-template-columns: 1fr;
+      }
       #anika-portfolio-preview .education-box {
         min-height: 0;
         aspect-ratio: 2.04 / 1;
@@ -892,8 +1023,54 @@
     <section class="education-section" id="education" aria-labelledby="education-title">
       <h2 class="section-title" id="education-title">Education</h2>
       <div class="education-list">
-        <article class="education-box" aria-label="Education placeholder one"></article>
-        <article class="education-box" aria-label="Education placeholder two"></article>
+        <article class="education-box">
+          <p class="education-year">2022 — 2026</p>
+          <div class="education-content">
+            <div class="education-school-row">
+              <div>
+                <h3 class="education-school">Rutgers University — New Brunswick</h3>
+                <p class="education-degree">Bachelor of Science in Computer Science &amp; Business Administration</p>
+                <p class="education-subtitle">Honors College</p>
+              </div>
+              <p class="education-location">New Brunswick, NJ</p>
+            </div>
+
+            <div class="education-rule" aria-hidden="true"></div>
+
+            <div class="education-meta-grid">
+              <div>
+                <p class="education-meta-label">Highlights</p>
+                <p class="education-meta-copy">GPA 3.7 · Dean’s List, all semesters · 1st Place, Merck Case Competition</p>
+              </div>
+              <div>
+                <p class="education-meta-label">Selected coursework</p>
+                <div class="coursework-list">
+                  <span class="coursework-item">Data Structures</span>
+                  <span class="coursework-item">Computer Algorithms</span>
+                  <span class="coursework-item">Introduction to AI</span>
+                  <span class="coursework-item">Computer Architecture</span>
+                  <span class="coursework-item">Financial Accounting</span>
+                  <span class="coursework-item">Operations Management</span>
+                  <span class="coursework-item">Supply Chain</span>
+                  <span class="coursework-item">Data Literacy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="education-box education-secondary">
+          <p class="education-year">2022</p>
+          <div class="education-content">
+            <div class="education-school-row">
+              <div>
+                <h3 class="education-school">University of Rochester</h3>
+                <p class="education-degree">Biomedical Engineering — Solving the Body’s Problems with AI and Technology</p>
+              </div>
+              <p class="education-location">Rochester, NY</p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
