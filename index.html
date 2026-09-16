@@ -472,6 +472,35 @@
       padding-bottom: 80px;
     }
 
+    #anika-portfolio-preview .personal-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(14px, 2vw, 22px);
+    }
+
+    #anika-portfolio-preview .personal-card {
+      margin: 0;
+      padding: 10px;
+      border: 1px solid #777777;
+      background: #000000;
+    }
+
+    #anika-portfolio-preview .personal-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border: 1px solid #252525;
+      background: #080808;
+    }
+
+    #anika-portfolio-preview .personal-card figcaption {
+      margin: 12px 2px 2px;
+      font: 400 clamp(.82rem, 1.2vw, .98rem)/1.45 'Quicksand', sans-serif;
+      letter-spacing: .01em;
+      color: #e6e6e6;
+    }
+
     #anika-portfolio-preview .section-title {
       margin: 0 0 16px;
       font: 400 1.15rem/1 'Quicksand', sans-serif;
@@ -780,6 +809,10 @@
       }
 
       #anika-portfolio-preview .education-meta-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #anika-portfolio-preview .personal-gallery {
         grid-template-columns: 1fr;
       }
       #anika-portfolio-preview .education-box {
@@ -1134,6 +1167,16 @@
 
     <section class="personal-section" id="personal" aria-labelledby="personal-title">
       <h2 class="section-title" id="personal-title">Personal</h2>
+      <div class="personal-gallery">
+        <figure class="personal-card">
+          <img src="assets/personal-rbc.webp" alt="Royal Bank of Canada Windows 11 Migration Project Pitch" />
+          <figcaption>Royal Bank of Canada Windows 11 Migration Project Pitch</figcaption>
+        </figure>
+        <figure class="personal-card">
+          <img src="assets/personal-agetech.webp" alt="AgeTech Connect Summit Pitch with Little Red Riding Hood" />
+          <figcaption>AgeTech Connect Summit Pitch with Little Red Riding Hood</figcaption>
+        </figure>
+      </div>
     </section>
   </section>
 
