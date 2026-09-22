@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anika Melkote Portfolio</title>
   <style>html, body { margin: 0; background: #000; }
+
+/* Fieldr extension showcase */
+#anika-portfolio-preview .fieldr-project{border:1px solid #777;background:#101013;color:#f4f4f5;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(18px,2.7vw,38px);padding:clamp(20px,2.7vw,38px);font-family:Arial,Helvetica,sans-serif}
+#anika-portfolio-preview .fieldr-project>*{min-width:0}
+#anika-portfolio-preview .fieldr-dashboard{border:1px solid #49474b;border-radius:18px;background:#1a191e;overflow:hidden;box-shadow:0 22px 44px rgba(0,0,0,.24)}
+#anika-portfolio-preview .fieldr-dashboard-bar{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #39383d;background:#242329}
+#anika-portfolio-preview .fieldr-brand-mark{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#e24d52;color:#fff;font-weight:800;font-size:18px}
+#anika-portfolio-preview .fieldr-dashboard-bar strong{font-size:16px;letter-spacing:-.03em}
+#anika-portfolio-preview .fieldr-demo-tag{margin-left:auto;font-size:11px;color:#bdb9c1}
+#anika-portfolio-preview .fieldr-dashboard-body{padding:clamp(16px,2vw,26px)}
+#anika-portfolio-preview .fieldr-preview-eyebrow,#anika-portfolio-preview .fieldr-eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#f58082;margin:0 0 12px}
+#anika-portfolio-preview .fieldr-dashboard h4{font-size:clamp(20px,2vw,27px);line-height:1.2;margin:0 0 18px}
+#anika-portfolio-preview .fieldr-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin:0 0 20px}
+#anika-portfolio-preview .fieldr-steps button{border:1px solid #4a464d;border-radius:8px;padding:10px 6px;min-height:48px;background:#25242a;color:#d8d5dc;font:600 12px/1.25 Arial,Helvetica,sans-serif;cursor:pointer}
+#anika-portfolio-preview .fieldr-steps button[aria-pressed="true"]{background:#e24d52;color:white;border-color:#e24d52}
+#anika-portfolio-preview .fieldr-steps button:hover{border-color:#ff9da0}
+#anika-portfolio-preview .fieldr-steps button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+#anika-portfolio-preview .fieldr-demo-pane{background:#111115;border:1px solid #39383d;border-radius:12px;padding:18px;min-height:245px}
+#anika-portfolio-preview .fieldr-demo-pane[hidden]{display:none}
+#anika-portfolio-preview .fieldr-demo-site{font-size:12px;color:#c8c6cd;margin:0 0 16px;overflow-wrap:anywhere}
+#anika-portfolio-preview .fieldr-demo-status{display:inline-flex;align-items:center;gap:8px;border:1px solid #ef7a7e;border-radius:999px;padding:8px 12px;color:#ff999d;font-size:13px;font-weight:700;margin:0 0 18px}
+#anika-portfolio-preview .fieldr-demo-status::before{content:"";width:7px;height:7px;border-radius:50%;background:#ff777d}
+#anika-portfolio-preview .fieldr-demo-pane h5{font-size:17px;margin:0 0 10px}
+#anika-portfolio-preview .fieldr-demo-pane p{font-size:14px;line-height:1.55;color:#ccc8d0;margin:0}
+#anika-portfolio-preview .fieldr-mini-fields{display:grid;gap:9px;margin:12px 0 0}
+#anika-portfolio-preview .fieldr-mini-fields div{display:flex;justify-content:space-between;gap:10px;border:1px solid #454148;border-radius:7px;padding:10px 12px;font-size:13px}
+#anika-portfolio-preview .fieldr-mini-fields span{color:#b7b3bd}
+#anika-portfolio-preview .fieldr-mini-fields b{color:#f2edef;font-weight:600;text-align:right}
+#anika-portfolio-preview .fieldr-demo-foot{font-size:12px;color:#b8b4be;margin:16px 0 0;line-height:1.4}
+#anika-portfolio-preview .fieldr-story{display:flex;flex-direction:column;justify-content:center}
+#anika-portfolio-preview .fieldr-story h3{font-size:clamp(34px,4vw,58px);line-height:1;letter-spacing:-.05em;margin:8px 0 12px}
+#anika-portfolio-preview .fieldr-subtitle{font-size:clamp(17px,1.75vw,24px);color:#ddd7dc;margin:0 0 22px;line-height:1.3}
+#anika-portfolio-preview .fieldr-description{font-size:clamp(15px,1.2vw,18px);line-height:1.55;color:#c4c0c8;margin:0 0 24px}
+#anika-portfolio-preview .fieldr-highlights{display:grid;gap:0;margin:0 0 26px;padding:0;list-style:none}
+#anika-portfolio-preview .fieldr-highlights li{padding:12px 0;border-top:1px solid #48444b;display:flex;gap:12px;font-size:14px;line-height:1.4;color:#e2dfe4}
+#anika-portfolio-preview .fieldr-highlights li::before{content:"↗";color:#ff8589;font-size:18px;line-height:1}
+#anika-portfolio-preview .fieldr-tools{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+#anika-portfolio-preview .fieldr-tools li{border:1px solid #6b4a4e;border-radius:999px;padding:8px 12px;color:#ffb4b5;font-size:12px;line-height:1.2}
+@media(max-width:1000px){#anika-portfolio-preview .fieldr-project{grid-template-columns:1fr}#anika-portfolio-preview .fieldr-story{grid-row:1}}
+@media(max-width:520px){#anika-portfolio-preview .fieldr-project{padding:16px}#anika-portfolio-preview .fieldr-steps{grid-template-columns:repeat(2,minmax(0,1fr))}#anika-portfolio-preview .fieldr-dashboard-body{padding:14px}#anika-portfolio-preview .fieldr-demo-pane{min-height:280px}}
 /* Workforce Ledger project showcase */
 #anika-portfolio-preview .wl-project{background:#fff;color:#151515;border:1px solid #777;padding:clamp(16px,2vw,30px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 28px;font-family:Arial,Helvetica,sans-serif}
 #anika-portfolio-preview .wl-project>*{min-width:0}
@@ -1086,7 +1126,57 @@
  <div class="wl-included"><h4 class="wl-eyebrow">WHAT’S INCLUDED</h4><div class="wl-features"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/></svg><div><h5>Data validation</h5><p>Duplicates, invalid dates and missing fields.</p></div></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg><div><h5>Historical reporting</h5><p>Headcount and assignments over time.</p></div></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="m15 15 7 7"/></svg><div><h5>HR–Finance reconciliation</h5><p>Differences traced to individual records.</p></div></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V12h4v8M10 20V8h4v12M16 20V3h4v17M2 21h20"/></svg><div><h5>Interactive dashboard</h5><p>Workforce trends and quality findings.</p></div></div></div></div>
  <div class="wl-recon"><h4 class="wl-eyebrow">RECONCILIATION SNAPSHOT</h4><table class="wl-table"><tbody><tr><th scope="row">Finance employee count</th><td>962</td></tr><tr><th scope="row">Net adjustment</th><td>+1</td></tr><tr><th scope="row">Validated HR employee count</th><td>963</td></tr><tr><th scope="row">Unresolved employment records</th><td>5</td></tr><tr><th scope="row">Reporting status</th><td><span class="wl-status">PROVISIONAL</span></td></tr></tbody></table><p class="wl-note">Synthetic data · HR: Aug 31, 2026 · Finance: Aug 25, 2026</p></div>
 </article>
-        <article class="project-placeholder" aria-label="Project placeholder two"></article>
+        <article class="fieldr-project" aria-labelledby="fieldr-title">
+          <div class="fieldr-dashboard" aria-label="Interactive illustration of the Fieldr Workday workflow">
+            <div class="fieldr-dashboard-bar"><span class="fieldr-brand-mark" aria-hidden="true">F</span><strong>fieldr</strong><span class="fieldr-demo-tag">WORKFLOW PREVIEW</span></div>
+            <div class="fieldr-dashboard-body">
+              <p class="fieldr-preview-eyebrow">A REPEATABLE APPLICATION FLOW</p>
+              <h4>From first visit to final review</h4>
+              <div class="fieldr-steps" role="group" aria-label="Explore Fieldr workflow">
+                <button type="button" aria-pressed="true" data-fieldr-step="detect">01 Detect</button>
+                <button type="button" aria-pressed="false" data-fieldr-step="account">02 Account</button>
+                <button type="button" aria-pressed="false" data-fieldr-step="answers">03 Answers</button>
+                <button type="button" aria-pressed="false" data-fieldr-step="review">04 Review</button>
+              </div>
+              <div class="fieldr-demo-pane" data-fieldr-pane="detect">
+                <p class="fieldr-demo-site">company.wd5.myworkdayjobs.com</p>
+                <span class="fieldr-demo-status">Workday site detected</span>
+                <h5>Recognize the application</h5>
+                <p>Fieldr checks supported Workday domains and identifies the employer's tenant before the signup or login flow begins.</p>
+              </div>
+              <div class="fieldr-demo-pane" data-fieldr-pane="account" hidden>
+                <span class="fieldr-demo-status">Encrypted login ready</span>
+                <h5>Reuse the account details</h5>
+                <div class="fieldr-mini-fields"><div><span>Email</span><b>saved in Fieldr</b></div><div><span>Password</span><b>••••••••••••</b></div></div>
+                <p style="margin-top:12px">An unlock phrase protects the saved credential. Fieldr fills login fields on later visits after unlocking.</p>
+              </div>
+              <div class="fieldr-demo-pane" data-fieldr-pane="answers" hidden>
+                <span class="fieldr-demo-status">Saved answers matched</span>
+                <h5>Fill recurring questions</h5>
+                <div class="fieldr-mini-fields"><div><span>Contact details</span><b>From profile</b></div><div><span>Repeated questions</span><b>From answer bank</b></div></div>
+                <p style="margin-top:12px">Exact saved answers follow you across supported Workday application forms.</p>
+              </div>
+              <div class="fieldr-demo-pane" data-fieldr-pane="review" hidden>
+                <span class="fieldr-demo-status">Ready for your review</span>
+                <h5>Check before submitting</h5>
+                <p>Fieldr leaves unfamiliar or employer-specific questions open. The applicant reviews the completed form and submits the job application.</p>
+              </div>
+              <p class="fieldr-demo-foot">Illustrative workflow · Extension prototype, not live application data</p>
+            </div>
+          </div>
+          <div class="fieldr-story">
+            <p class="fieldr-eyebrow">BROWSER EXTENSION · IN DEVELOPMENT</p>
+            <h3 id="fieldr-title">Fieldr</h3>
+            <p class="fieldr-subtitle">Less repetition in job applications.</p>
+            <p class="fieldr-description">I built a Chrome extension that recognizes Workday application sites, manages a reusable encrypted login, and fills profile fields and saved answers to recurring questions. The goal is to give applicants their time back without taking the final review out of their hands.</p>
+            <ul class="fieldr-highlights">
+              <li>Workday tenant detection and account creation flow</li>
+              <li>Encrypted credential storage with session unlock</li>
+              <li>Reusable profile and question answer matching</li>
+            </ul>
+            <ul class="fieldr-tools" aria-label="Fieldr tools and focus"><li>JavaScript</li><li>Chrome Extensions</li><li>Manifest V3</li><li>Web Crypto</li><li>DOM Matching</li><li>UX Design</li></ul>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -1253,6 +1343,13 @@
     (() => {
       const root = document.getElementById('anika-portfolio-preview');
       const word = root.querySelector('#rotating-welcome');
+      const fieldrButtons = root.querySelectorAll('[data-fieldr-step]');
+      const fieldrPanes = root.querySelectorAll('[data-fieldr-pane]');
+      fieldrButtons.forEach(button => button.addEventListener('click', () => {
+        const selected = button.dataset.fieldrStep;
+        fieldrButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        fieldrPanes.forEach(pane => { pane.hidden = pane.dataset.fieldrPane !== selected; });
+      }));
       const welcomes = ['welcome', 'bienvenue', 'bienvenida', 'swāgatam', 'benvenuta', 'yōkoso'];
       let index = 0;
       window.setInterval(() => {
