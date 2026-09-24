@@ -6,6 +6,36 @@
   <title>Anika Melkote Portfolio</title>
   <style>html, body { margin: 0; background: #000; }
 
+/* tmrw project showcase */
+#anika-portfolio-preview .tmrw-preview{background:#000;border:1px solid #555;border-radius:18px;padding:clamp(16px,2.2vw,30px);align-self:center;color:#fff;min-width:0}
+#anika-portfolio-preview .tmrw-preview-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:32px}
+#anika-portfolio-preview .tmrw-preview-logo{font-family:'Quicksand',sans-serif;font-size:42px;letter-spacing:-2px;line-height:1}
+#anika-portfolio-preview .tmrw-preview-label{font-size:10px;letter-spacing:1.4px;color:#aaa;text-align:right}
+#anika-portfolio-preview .tmrw-preview-calendar h4{font-family:'Quicksand',sans-serif;font-size:27px;font-weight:400;margin:0 0 18px}
+#anika-portfolio-preview .tmrw-preview-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:clamp(6px,1vw,13px)}
+#anika-portfolio-preview .tmrw-preview-grid button{width:100%;aspect-ratio:1;min-width:0;border:2px solid #fff;border-radius:10px;background:var(--tmrw-shade,#000);padding:0;cursor:pointer;transition:background-color .16s,border-color .16s}
+#anika-portfolio-preview .tmrw-preview-grid button:hover{background:#333;border-color:#999}
+#anika-portfolio-preview .tmrw-preview-entry{border:2px solid #fff;border-radius:13px;padding:16px;min-height:310px}
+#anika-portfolio-preview .tmrw-entry-top{display:flex;align-items:flex-start;gap:10px;justify-content:space-between}
+#anika-portfolio-preview .tmrw-entry-top h4{font:400 17px/1.4 'Quicksand',sans-serif;margin:0;overflow-wrap:anywhere}
+#anika-portfolio-preview .tmrw-entry-top button{border:0;color:#fff;background:#000;font-size:25px;padding:0 4px;cursor:pointer}
+#anika-portfolio-preview .tmrw-preview-rating{display:flex;justify-content:center;gap:7px;margin:20px 0}
+#anika-portfolio-preview .tmrw-preview-rating button{width:34px;height:34px;border:2px solid #fff;border-radius:8px;background:#000;cursor:pointer;padding:0}
+#anika-portfolio-preview .tmrw-preview-entry h5{font:400 17px/1.3 'Quicksand',sans-serif;margin:16px 0 9px}
+#anika-portfolio-preview .tmrw-preview-task{display:flex;align-items:center;gap:9px;font-size:13px;line-height:1.5;color:#ccc}
+#anika-portfolio-preview .tmrw-preview-task input{appearance:none;flex:0 0 20px;width:20px;height:20px;margin:0;border:1px solid #fff;border-radius:5px;background:#000;cursor:pointer}
+#anika-portfolio-preview .tmrw-preview-task input:hover{background:#333}
+#anika-portfolio-preview .tmrw-preview-task input:checked{background:#fff}
+#anika-portfolio-preview .tmrw-preview-journal{font-size:13px;line-height:1.5;color:#bbb;margin:0}
+#anika-portfolio-preview .tmrw-preview-foot{font-size:12px;line-height:1.5;color:#aaa;margin:22px 0 0}
+#anika-portfolio-preview .tmrw-project-actions{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+#anika-portfolio-preview .tmrw-project-actions a,#anika-portfolio-preview .tmrw-project-actions button{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px;border:1px solid #bbb;color:#fff;background:transparent;text-decoration:none;font:600 12px/1.3 Arial,sans-serif;cursor:pointer}
+#anika-portfolio-preview .tmrw-project-actions a:hover,#anika-portfolio-preview .tmrw-project-actions button:hover{background:#fff;color:#000}
+#anika-portfolio-preview .tmrw-project button:focus-visible,#anika-portfolio-preview .tmrw-project a:focus-visible,#anika-portfolio-preview .tmrw-project input:focus-visible{outline:2px solid #ff8589;outline-offset:3px}
+#anika-portfolio-preview .tmrw-project [hidden]{display:none!important}
+@media(max-width:520px){#anika-portfolio-preview .tmrw-preview-grid button{border-radius:7px}#anika-portfolio-preview .tmrw-preview-entry{padding:12px}#anika-portfolio-preview .tmrw-preview-top{margin-bottom:24px}}
+@media(prefers-reduced-motion:reduce){#anika-portfolio-preview .tmrw-preview-grid button{transition:none}}
+
 /* Fieldr extension showcase */
 #anika-portfolio-preview .fieldr-project{border:1px solid #777;background:#101013;color:#f4f4f5;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(18px,2.7vw,38px);padding:clamp(20px,2.7vw,38px);font-family:Arial,Helvetica,sans-serif}
 #anika-portfolio-preview .fieldr-project>*{min-width:0}
@@ -1110,6 +1140,47 @@
     <section class="projects-section" id="projects" aria-labelledby="projects-title">
       <h2 class="projects-title" id="projects-title">Projects</h2>
       <div class="projects-list">
+        <article class="fieldr-project tmrw-project" aria-labelledby="tmrw-project-title">
+          <div class="tmrw-preview" aria-label="Interactive tmrw project preview">
+            <div class="tmrw-preview-top"><span class="tmrw-preview-logo">tmrw</span><span class="tmrw-preview-label">INTERACTIVE PREVIEW</span></div>
+            <div class="tmrw-preview-calendar" data-tmrw-calendar>
+              <h4>september</h4>
+              <div class="tmrw-preview-grid" data-tmrw-grid aria-label="September 2026 preview calendar"></div>
+            </div>
+            <div class="tmrw-preview-entry" data-tmrw-entry hidden>
+              <div class="tmrw-entry-top"><h4 data-tmrw-date>wednesday, september 23rd</h4><button type="button" data-tmrw-back aria-label="Return to preview calendar">×</button></div>
+              <div class="tmrw-preview-rating" data-tmrw-rating role="group" aria-label="Choose a sample daily rating">
+                <button type="button" aria-label="Rate day 1 out of 5" aria-pressed="false" data-tmrw-value="1"></button>
+                <button type="button" aria-label="Rate day 2 out of 5" aria-pressed="false" data-tmrw-value="2"></button>
+                <button type="button" aria-label="Rate day 3 out of 5" aria-pressed="false" data-tmrw-value="3"></button>
+                <button type="button" aria-label="Rate day 4 out of 5" aria-pressed="false" data-tmrw-value="4"></button>
+                <button type="button" aria-label="Rate day 5 out of 5" aria-pressed="false" data-tmrw-value="5"></button>
+              </div>
+              <h5>from yesterday:</h5><label class="tmrw-preview-task"><input type="checkbox" /> make time for a walk</label>
+              <h5>about today:</h5><p class="tmrw-preview-journal">A little progress still counts.</p>
+              <h5>for tmrw:</h5><label class="tmrw-preview-task"><input type="checkbox" /> start with one small thing</label>
+            </div>
+            <p class="tmrw-preview-foot" data-tmrw-feedback aria-live="polite">Select a day to explore. Sample entries only.</p>
+          </div>
+          <div class="fieldr-story">
+            <p class="fieldr-eyebrow">WEB APP · DAILY REFLECTION</p>
+            <h3 id="tmrw-project-title">tmrw</h3>
+            <p class="fieldr-subtitle">A little space for today. A little direction for tomorrow.</p>
+            <p class="fieldr-description">I designed and built a minimalist diary that turns daily reflection into a visual calendar. Each day opens into a journal entry, a five-shade rating, and a short checklist for tomorrow. Those plans carry into the next day, making it easier to pick up where you left off.</p>
+            <ul class="fieldr-highlights">
+              <li>A calendar that reflects each day's rating in shades of gray.</li>
+              <li>Linked daily checklists and autosaved journal entries.</li>
+              <li>Numbered accounts and password login for access across devices.</li>
+            </ul>
+            <div class="tmrw-project-actions">
+              <button type="button" data-tmrw-try>TRY PREVIEW <span aria-hidden="true">↗</span></button>
+              <a href="https://github.com/anikamelkoter/tmrw" target="_blank" rel="noopener noreferrer">VIEW CODE <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/anikamelkoter/tmrw/blob/main/README.md" target="_blank" rel="noopener noreferrer">WRITEUP <span aria-hidden="true">↗</span></a>
+            </div>
+            <ul class="fieldr-tools" aria-label="tmrw tools and focus"><li>JavaScript</li><li>HTML &amp; CSS</li><li>Cloudflare Workers</li><li>Cloudflare D1</li><li>SQL</li><li>Authentication</li><li>UX Design</li><li>GitHub</li></ul>
+          </div>
+        </article>
+
         <article class="wl-project" aria-labelledby="workforce-ledger-title">
  <div class="wl-preview" aria-label="Workforce Ledger dashboard summary">
   <div class="wl-preview-header"><strong>WORKFORCE LEDGER</strong><span>PEOPLE · DATA · TRUST</span></div>
@@ -1343,6 +1414,55 @@
     (() => {
       const root = document.getElementById('anika-portfolio-preview');
       const word = root.querySelector('#rotating-welcome');
+      // Self-contained showcase: sample ratings never touch a visitor's real diary.
+      const tmrwCard = root.querySelector('.tmrw-project');
+      if (tmrwCard) {
+        const grid = tmrwCard.querySelector('[data-tmrw-grid]');
+        const calendar = tmrwCard.querySelector('[data-tmrw-calendar]');
+        const entry = tmrwCard.querySelector('[data-tmrw-entry]');
+        const ratingGroup = tmrwCard.querySelector('[data-tmrw-rating]');
+        const ratings = Array.from(ratingGroup.querySelectorAll('button'));
+        const shades = ['#404040', '#666666', '#919191', '#bcbcbc', '#ffffff'];
+        const sample = new Map([[3,2],[4,3],[7,1],[9,4],[12,5],[15,3],[17,4],[20,2],[22,5]]);
+        const days = new Map();
+        let selectedDay = 23;
+        function paintRating(value) {
+          ratings.forEach((button,index) => {
+            button.style.background = index < value ? shades[index] : '#000';
+            button.setAttribute('aria-pressed',String(sample.get(selectedDay) === index+1));
+          });
+        }
+        function paintDay(day) {
+          const value = sample.get(day) || 0;
+          const button = days.get(day);
+          button.style.setProperty('--tmrw-shade', value ? shades[value-1] : '#000');
+          button.setAttribute('aria-label', 'September '+day+', 2026'+(value ? ', sample rating '+value+' of 5' : ', no sample rating'));
+        }
+        function openDay(day) {
+          selectedDay=day;
+          const suffix=day>=11&&day<=13?'th':({1:'st',2:'nd',3:'rd'}[day%10]||'th');
+          const weekday=['sunday','monday','tuesday','wednesday','thursday','friday','saturday'][new Date(2026,8,day).getDay()];
+          tmrwCard.querySelector('[data-tmrw-date]').textContent=weekday+', september '+day+suffix;
+          calendar.hidden=true;entry.hidden=false;paintRating(sample.get(day)||0);
+          tmrwCard.querySelector('[data-tmrw-feedback]').textContent='Hover to preview a shade. Click to select, then return to the calendar.';
+          tmrwCard.querySelector('[data-tmrw-back]').focus({preventScroll:true});
+        }
+        for(let i=0;i<2;i++){const spacer=document.createElement('span');spacer.setAttribute('aria-hidden','true');grid.append(spacer);}
+        for(let day=1;day<=30;day++){
+          const button=document.createElement('button');button.type='button';days.set(day,button);paintDay(day);
+          button.addEventListener('click',()=>openDay(day));grid.append(button);
+        }
+        ratings.forEach((button,index)=>{
+          button.addEventListener('pointerenter',()=>paintRating(index+1));
+          button.addEventListener('focus',()=>paintRating(index+1));
+          button.addEventListener('click',()=>{sample.set(selectedDay,index+1);paintRating(index+1);paintDay(selectedDay);tmrwCard.querySelector('[data-tmrw-feedback]').textContent='Sample rating selected. Return to the calendar to see its shade.';});
+        });
+        ratingGroup.addEventListener('pointerleave',()=>paintRating(sample.get(selectedDay)||0));
+        ratingGroup.addEventListener('focusout',event=>{if(!ratingGroup.contains(event.relatedTarget))paintRating(sample.get(selectedDay)||0);});
+        tmrwCard.querySelector('[data-tmrw-back]').addEventListener('click',()=>{entry.hidden=true;calendar.hidden=false;days.get(selectedDay).focus({preventScroll:true});tmrwCard.querySelector('[data-tmrw-feedback]').textContent='Select a day to explore. Sample entries only.';});
+        tmrwCard.querySelector('[data-tmrw-try]').addEventListener('click',()=>openDay(23));
+      }
+
       const fieldrButtons = root.querySelectorAll('[data-fieldr-step]');
       const fieldrPanes = root.querySelectorAll('[data-fieldr-pane]');
       fieldrButtons.forEach(button => button.addEventListener('click', () => {
@@ -1374,3 +1494,4 @@
 </div>
 </body>
 </html>
+
