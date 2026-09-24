@@ -174,9 +174,10 @@
       position: relative;
       width: 210px;
       height: 555px;
+      transform: scale(1.12);
       transform-origin: 50% 0;
-      animation: lanyardDrop 1.3s cubic-bezier(.18,.75,.27,1.05) .2s both,
-                 lanyardSway 5.5s ease-in-out 1.5s infinite;
+      animation: lanyardDrop 1.55s cubic-bezier(.18,.75,.27,1.05) .2s both,
+                 lanyardSway 5.5s ease-in-out 1.75s infinite;
     }
 
     #anika-portfolio-preview .strap {
@@ -841,14 +842,14 @@
     }
 
     @keyframes lanyardDrop {
-      0% { transform: translateY(-560px) rotate(-8deg); }
-      72% { transform: translateY(18px) rotate(4deg); }
-      100% { transform: translateY(0) rotate(0); }
+      0% { transform: translateY(-630px) rotate(-8deg) scale(1.12); }
+      72% { transform: translateY(18px) rotate(4deg) scale(1.12); }
+      100% { transform: translateY(0) rotate(0) scale(1.12); }
     }
 
     @keyframes lanyardSway {
-      0%, 100% { transform: rotate(-1.2deg); }
-      50% { transform: rotate(1.2deg); }
+      0%, 100% { transform: rotate(-1.2deg) scale(1.12); }
+      50% { transform: rotate(1.2deg) scale(1.12); }
     }
 
     @media (max-width: 760px) {
@@ -859,8 +860,8 @@
         gap: 0;
         padding: 0 24px 48px;
       }
-      #anika-portfolio-preview .lanyard-zone { height: 430px; }
-      #anika-portfolio-preview .lanyard { transform: scale(.76); transform-origin: top center; }
+      #anika-portfolio-preview .lanyard-zone { height: 480px; }
+      #anika-portfolio-preview .lanyard { transform: scale(.85); transform-origin: top center; }
       #anika-portfolio-preview .main-copy { padding: 0; }
       #anika-portfolio-preview .portfolio-nav { margin-bottom: 40px; }
       #anika-portfolio-preview .portfolio-nav button,
@@ -944,13 +945,13 @@
         aspect-ratio: 2.04 / 1;
       }
       @keyframes lanyardDrop {
-        0% { transform: translateY(-560px) rotate(-8deg) scale(.76); }
-        72% { transform: translateY(18px) rotate(4deg) scale(.76); }
-        100% { transform: translateY(0) rotate(0) scale(.76); }
+        0% { transform: translateY(-560px) rotate(-8deg) scale(.85); }
+        72% { transform: translateY(18px) rotate(4deg) scale(.85); }
+        100% { transform: translateY(0) rotate(0) scale(.85); }
       }
       @keyframes lanyardSway {
-        0%, 100% { transform: rotate(-1.2deg) scale(.76); }
-        50% { transform: rotate(1.2deg) scale(.76); }
+        0%, 100% { transform: rotate(-1.2deg) scale(.85); }
+        50% { transform: rotate(1.2deg) scale(.85); }
       }
     }
 
